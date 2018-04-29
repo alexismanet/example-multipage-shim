@@ -186,3 +186,9 @@ gulp.task('rjs', function (cb) {
         cb(err);
     });
 });
+
+
+gulp.task('copyNpmFiles', function () {
+    gulp.src(['./node_modules/requirejs/require.js']).pipe(gulp.dest('./app/js'));
+
+});

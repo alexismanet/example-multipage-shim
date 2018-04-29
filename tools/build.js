@@ -1,7 +1,7 @@
 ({
     appDir: '../app/js/src',
     mainConfigFile: '../app/js/src/common.js',
-    baseUrl: 'lib',
+    baseUrl: 'bower_components',
     dir: '../app/js/dist',
     optimize: 'none',
     modules: [

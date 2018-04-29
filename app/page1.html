@@ -1,34 +1,19 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Page 1</title>
-        <!--<script src="js/src/lib/require.js"></script>-->
-        <script src="js/dist/lib/require.js"></script>
-        <script>
-            //Load common code that includes config, then load the app
-            //logic for this page. Do the requirejs calls here instead of
-            //a separate file so after a build there are only 2 HTTP
-            //requests instead of three.
-
-//            requirejs.config({
-//                baseUrl: 'js/src/lib'
-//            });
-
-            requirejs.config({
-                 baseUrl: 'js/dist/lib'
-            });
-
-            requirejs(['../common'], function (common) {
-//            requirejs(['./js/common'], function (common) {
-//            requirejs(['../common'], function (common) {
-                //js/common sets the baseUrl to be js/ so
-                //can just ask for 'app/main1' here instead
-                //of 'js/app/main1'
-                requirejs(['app/main1']);
-            });
-        </script>
-    </head>
-    <body>
-        <a href="page2.html">Go to Page 2</a>
-    </body>
+<head>
+    <title>Page 1</title>
+    <script src="js/require.js"></script>
+    <script>
+        requirejs.config({
+//            baseUrl: 'js/src/bower_components'
+            baseUrl: 'js/dist/bower_components'
+        });
+        requirejs(['../common'], function (common) {
+            requirejs(['app/main1']);
+        });
+    </script>
+</head>
+<body>
+<a href="page2.html">Go to Page 2</a>
+</body>
 </html>

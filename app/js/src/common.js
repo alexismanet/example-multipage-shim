@@ -9,6 +9,11 @@ requirejs.config({
     // baseUrl: 'js/lib',
     // baseUrl: 'lib',
     paths: {
+
+        backbone : 'backbone',
+        // jquery : 'jquery',
+        jquery : 'jquery/dist/jquery',
+        underscore : 'underscore',
         app: '../app'
     },
     shim: {
