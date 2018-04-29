@@ -1,7 +1,11 @@
-{
-    appDir: '../www',
-    mainConfigFile: '../www/js/common.js',
-    dir: '../www-built',
+({
+    // appDir: '../www',
+    appDir: '../www/js/src',
+    mainConfigFile: '../www/js/src/common.js',
+    baseUrl: 'lib',
+    // dir: '../www-built',
+    dir: '../www/js/dist',
+    optimize: 'none',
     modules: [
         //First set up the common build layer.
         {
@@ -41,4 +45,4 @@
         }
 
     ]
-}
+})
