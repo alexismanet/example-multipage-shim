@@ -1,6 +1,6 @@
 ({
     appDir: '../app/js/src',
-    mainConfigFile: '../app/js/src/common.js',
+    mainConfigFile: '../app/js/src/MainCommon.js',
     baseUrl: 'bower_components',
     dir: '../app/js/dist',
     optimize: 'none',
@@ -8,7 +8,7 @@
         //First set up the common build layer.
         {
             //module names are relative to baseUrl
-            name: '../common',
+            name: '../MainCommon',
             //List common dependencies here. Only need to list
             //top level dependencies, "include" will find
             //nested dependencies.
@@ -33,13 +33,13 @@
         {
             //module names are relative to baseUrl/paths config
             name: 'app/main1',
-            exclude: ['../common']
+            exclude: ['../MainCommon']
         },
 
         {
             //module names are relative to baseUrl
             name: 'app/main2',
-            exclude: ['../common']
+            exclude: ['../MainCommon']
         }
 
     ]
