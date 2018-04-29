@@ -166,7 +166,7 @@ gulp.task('wiredep', () => {
         .pipe(gulp.dest('app'));
 });
 
-gulp.task('build', ['lint', 'html', 'images', 'fonts', 'extras'], () => {
+gulp.task('build', ['copyNpmFiles', 'lint', 'html', 'images', 'fonts', 'extras'], () => {
     return gulp.src('dist/**/*').pipe($.size({title: 'build', gzip: true}));
 });
 
@@ -187,8 +187,6 @@ gulp.task('rjs', function (cb) {
     });
 });
 
-
 gulp.task('copyNpmFiles', function () {
     gulp.src(['./node_modules/requirejs/require.js']).pipe(gulp.dest('./app/js'));
-
 });

@@ -3,7 +3,8 @@
     mainConfigFile: '../app/js/src/MainCommon.js',
     baseUrl: 'bower_components',
     dir: '../app/js/dist',
-    optimize: 'none',
+    // optimize: 'none',
+    preserveLicenseComments: false,
     modules: [
         //First set up the common build layer.
         {
